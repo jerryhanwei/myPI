@@ -81,6 +81,7 @@ int main(int argc,char* argv[])
     double masterStartTime=0.0;
     double masterEndTime=0.0;
 
+   
     if (myid == 0) {
 
         // Get the loop times
@@ -148,5 +149,8 @@ int main(int argc,char* argv[])
         // Slave sends 'sum1' to master
         MPI::COMM_WORLD.Send(&sum1, 1, MPI_LONG, 0, 0);
     }
+
+    
+
     MPI::Finalize();
 }

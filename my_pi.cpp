@@ -125,7 +125,8 @@ int main(int argc,char* argv[])
         std::cout << " throwing times：" << N << std::endl;
         std::cout << " targeted times：" << result << std::endl;
         std::cout << " PI ：" << PI << std::endl;
-
+        
+        double np1time = 4.3591;
         masterEndTime=MPI_Wtime();
         double wholeTime = masterEndTime-masterStartTime;
         double communicationTime = slaveSendingTimeEnd-slaveSendingTimeStart;
@@ -134,6 +135,7 @@ int main(int argc,char* argv[])
         cout<<"the whole process elapse time: "<<wholeTime<<endl;
         cout<<"parallel program communication time: "<<communicationTime<<endl;
         cout<<"master took "<<percentOfCommunication<<"% of wholeTime to call slaves to do some help"<<endl;
+        cout << "the speed-up is: " << np1time/wholeTime << endl;
 
     }
 

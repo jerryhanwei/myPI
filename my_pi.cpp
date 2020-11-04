@@ -77,7 +77,7 @@ int main(int argc,char* argv[])
     // What is my ID and how many processes are in this pool?
     int myid = MPI::COMM_WORLD.Get_rank();
     int numproc = MPI::COMM_WORLD.Get_size();
-    std::cout << "This is id " << myid << " out of " << numproc << std::endl;
+    //std::cout << "This is id " << myid << " out of " << numproc << std::endl;
     double masterStartTime=0.0;
     double masterEndTime=0.0;
 
